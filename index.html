@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gorilla Tag — Фан-сайт</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Шапка сайту (Header) -->
+  <header class="main-header">
+    <div class="logo">
+      <img src="https://yt3.googleusercontent.com/kIy85-lHIARVDL3UMwvVUoPrvYzaWpFTVunUg5-I80oxF1ouBrpmx-4CRWZ5WLJcveWRnM0N5g=s900-c-k-c0x00ffffff-no-rj" alt="Gorilla Tag Logo">
+      <span>Gorilla Tag</span>
+    </div>
+    <nav>
+      <a href="#hero">Головна</a>
+      <a href="#tips">Поради</a>
+    </nav>
+  </header>
+
+  <!-- Секція Хіро -->
+  <section id="hero" class="hero">
+    <h1>Ласкаво просимо до Gorilla Tag!</h1>
+    <p>Стань найшвидшою мавпою, вивчай супер-рухи та перемагай друзів у світі VR!</p>
+    <button class="btn" onclick="openModal('Секретна порада', 'Тренуйся у приватних кімнатах, щоб спокійно вивчити нові рухи без перешкод!')">Супер-порада</button>
+  </section>
+
+  <!-- Секція з порадами -->
+  <section id="tips" class="tips-section">
+    <h2>Поради для новачків (натисни на пораду!)</h2>
+
+    <div class="tip-card" onclick="openModal('1. Штовхайся паралельно землі', 'Якщо ти відштовхуєшся вгору, ти довго висиш у повітрі й стаєш легкою здобиччю. Штовхайся паралельно землі, щоб розвивати максимальную швидкість.')">
+      <h3>1. Штовхайся паралельно землі</h3>
+      <p>Не підстрибуй вгору! Штовхайся вздовж поверхні.</p>
+    </div>
+
+    <div class="tip-card" onclick="openModal('2. Використовуй дві руки для підйому', 'Обхоплюй стовбур дерева або кут стіни двома руками по черзі, роблячи швидкі рухи вниз, щоб легко підніматися вгору.')">
+      <h3>2. Використовуй дві руки для підйому</h3>
+      <p>Вчися правильно забиратися на дерева.</p>
+    </div>
+
+    <div class="tip-card" onclick="openModal('3. Залишайся спокійним', 'Коли за тобою женуться, розраховуй кожен рух. Панічні стрибки зазвичай призводять до помилок і падінь.')">
+      <h3>3. Залишайся спокійним</h3>
+      <p>Паніка заважає точно розраховувати стрибки.</p>
+    </div>
+
+    <div class="tip-card" onclick="openModal('4. Опануй Pinch Climbing', 'Обійми поверхню обома руками, потягни себе вниз, відпусти й знову схопися вище. Це найпростіший спосіб швидко залізти на дерево.')">
+      <h3>4. Опануй Pinch Climbing</h3>
+      <p>Техніка підйому між двома стінами або навколо стовбурів.</p>
+    </div>
+
+    <div class="tip-card" onclick="openModal('5. Використовуй Wall Bounce', 'Знайди дві близькі стіни, штовхайся від однієї до іншої під кутом вгору, щоб швидко підніматися на висоту.')">
+      <h3>5. Використовуй Wall Bounce</h3>
+      <p>Стрибки від стіни до стіни.</p>
+    </div>
+
+    <div class="tip-card" onclick="openModal('6. Вивчайте карту у приватній кімнаті', 'Створи приватну кімнату за допомогою комп’ютера у грі, щоб спокійно вивчити всі маршрути та схованки.')">
+      <h3>6. Вивчайте карту у приватній кімнаті</h3>
+      <p>Спокійно досліджуй усі схованки.</p>
+    </div>
+  </section>
+
+  <!-- Вспливаюче вікно (Modal) -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title">Заголовок</h2>
+      <p id="modal-text">Текст поради...</p>
+    </div>
+  </div>
+
+  <!-- Підвал сайту (Footer) -->
+  <footer class="main-footer">
+    <p>&copy; 2026 Фан-сайт Gorilla Tag. Створено для фанатів гри!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
