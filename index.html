@@ -24,14 +24,15 @@
   <section id="hero" class="hero">
     <h1>Ласкаво просимо до Gorilla Tag!</h1>
     <p>Стань найшвидшою мавпою, вивчай супер-рухи та перемагай друзів у світі VR!</p>
-    <button class="btn" onclick="openModal('Секретна порада', 'Тренуйся у приватних кімнатах, щоб спокійно вивчити нові рухи без перешкод!')">Супер-порада</button>
+    <button class="btn" onclick="showRandomSuperTip()">Супер-порада</button>
   </section>
 
   <!-- Секція з порадами -->
   <section id="tips" class="tips-section">
     <h2>Поради для новачків (натисни на пораду!)</h2>
 
-    <div class="tip-card" onclick="openModal('1. Штовхайся паралельно землі', 'Якщо ти відштовхуєшся вгору, ти довго висиш у повітрі й стаєш легкою здобиччю. Штовхайся паралельно землі, щоб розвивати максимальную швидкість.')">
+    <div class="tip-card" onclick="openModal('1. Штовхайся паралельно землі', 'Якщо ти відштовхуєшся вгору, ти довго висиш у повітрі й стаєш легкою здобиччю. Штовхайся паралельно землі, щоб розвивати максимальную швидкість.',
+     )">
       <h3>1. Штовхайся паралельно землі</h3>
       <p>Не підстрибуй вгору! Штовхайся вздовж поверхні.</p>
     </div>
@@ -62,18 +63,42 @@
     </div>
   </section>
 
-  <!-- Вспливаюче вікно (Modal) -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <h2 id="modal-title">Заголовок</h2>
-      <p id="modal-text">Текст поради...</p>
+<!-- Вспливаюче вікно (Modal) -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <h2 id="modal-title">Заголовок</h2>
+    <!-- Нове поле для малюнка -->
+    <img id="modal-image" src="" alt="Малюнок поради" style="width: 100%; border-radius: 5px; margin: 10px 0; display: none;">
+    <p id="modal-text">Текст поради...</p>
+  </div>
+</div>
+
+<!-- Секція з картами (Карусель) -->
+<section id="maps" class="maps-section">
+  <h2>Карти у Gorilla Tag</h2>
+  <div class="carousel">
+    <div class="carousel-track">
+      <div class="map-card">
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=500&q=80" alt="Forest">
+        <h3>Forest (Ліс)</h3>
+      </div>
+      <div class="map-card">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=500&q=80" alt="Canyon">
+        <h3>Canyon (Каньйон)</h3>
+      </div>
+      <div class="map-card">
+        <img src="https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?auto=format&fit=crop&w=500&q=80" alt="City">
+        <h3>City (Місто)</h3>
+      </div>
     </div>
   </div>
+</section>
+
 
   <!-- Підвал сайту (Footer) -->
   <footer class="main-footer">
-    <p>&copy; 2026 Фан-сайт Gorilla Tag. Створено для фанатів гри!</p>
+    <p>&copy; 2026 Фан-сайт Gorilla Tag. Створено для новачків!</p>
   </footer>
 
   <script src="script.js"></script>
